@@ -25,7 +25,7 @@ A Docker image providing a combined Python development environment and an Apache
 ## Building the Image
 
 ```bash
-docker build -t py-dev-apache-php .
+docker build -it py-dev-apache-php .
 ```
 
 ## Running the Container
