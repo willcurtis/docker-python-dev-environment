@@ -31,11 +31,10 @@ docker build -t py-dev-apache-php .
 ## Running the Container
 
 ```bash
-docker run --rm -it \
+docker run -d  \
   --name py-dev-apache-php \
   -p 8080:80 \
   -v "$(pwd)":/var/www/html \
-  --entrypoint bash \
   py-dev-apache-php
 ```
 
@@ -43,6 +42,12 @@ docker run --rm -it \
 * Mounts the current directory into `/var/www/html` for live code editing.
 
 Access your application at `http://localhost:8080`.
+
+## Acessing the Container CLI
+
+```bash
+docker exec -it py-dev-apache-php /bin/bash
+```
 
 ## Directory Structure
 
