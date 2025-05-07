@@ -31,9 +31,11 @@ docker build -t py-dev-apache-php .
 ## Running the Container
 
 ```bash
-docker run -it --rm \
+docker run --rm -it \
+  --name py-dev-apache-php \
   -p 8080:80 \
-  -v $(pwd):/var/www/html \
+  -v "$(pwd)":/var/www/html \
+  --entrypoint bash \
   py-dev-apache-php
 ```
 
