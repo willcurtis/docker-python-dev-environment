@@ -43,6 +43,12 @@ docker run -d  \
 
 Access your application at `http://localhost:8080`.
 
+## Acessing the Container CLI
+
+```bash
+docker exec -it py-dev-apache-php /bin/bash
+```
+
 ## Directory Structure
 
 * `/var/www/html`: Document root for Apache (your project files)
